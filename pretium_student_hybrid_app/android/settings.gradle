@@ -1,0 +1,3 @@
+rootProject.name = 'pretium_student_hybrid_app'
+
+include ':app'
