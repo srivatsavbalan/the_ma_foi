@@ -7,7 +7,7 @@ class TeachersController < ApplicationController
   def index
     @teachers = Teacher.all
     respond_to do |format|
-      format.json { render json: @teachers, status: :ok }
+      format.json { render json: {teachers: @teachers}, status: :ok }
     end
   end
 
@@ -15,7 +15,7 @@ class TeachersController < ApplicationController
   # GET /teachers/1.json
   def show
     respond_to do |format|
-      format.json { render json: @teacher, status: :ok }
+      format.json { render json: {teacher: @teacher}, status: :ok }
     end
   end
 
@@ -35,8 +35,7 @@ class TeachersController < ApplicationController
 
     respond_to do |format|
       if @teacher.save
-        format.html { redirect_to @teacher, notice: 'Teacher was successfully created.' }
-        format.json { render :show, status: :created, location: @teacher }
+        format.json { render json: {teacher: @teacher}, status: :ok }
       else
         format.html { render :new }
         format.json { render json: @teacher.errors, status: :unprocessable_entity }
@@ -77,6 +76,6 @@ class TeachersController < ApplicationController
     def teacher_params
       params.require(:teacher).permit(:name, :specialisation, :college_id, 
         :designation, :dob, :gender,:nationality,:marital_status,:spouse_name,:address, :contact_number,
-        :secondary_school, :senior_secondary_school, :graduation, :post_graduation)
+        :secondary_school, :senior_secondary_school, :graduation, :post_graduation, :higher_secondary_school)
     end
 end

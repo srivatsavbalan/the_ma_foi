@@ -6,11 +6,17 @@ class StudentsController < ApplicationController
   # GET /students.json
   def index
     @students = Student.all
+    respond_to do |format|
+      format.json { render json: {students: @students}, status: :ok }
+    end
   end
 
   # GET /students/1
   # GET /students/1.json
   def show
+    respond_to do |format|
+      format.json { render json: {student: @student}, status: :ok }
+    end
   end
 
   # GET /students/new
@@ -29,10 +35,8 @@ class StudentsController < ApplicationController
 
     respond_to do |format|
       if @student.save
-        format.html { redirect_to @student, notice: 'Student was successfully created.' }
-        format.json { render :show, status: :created, location: @student }
+        format.json { render json: {student: @student}, status: :ok }
       else
-        format.html { render :new }
         format.json { render json: @student.errors, status: :unprocessable_entity }
       end
     end
@@ -70,6 +74,10 @@ class StudentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_params
-      params.require(:student).permit(:name, :passout, :course, :college_id)
+      params.require(:student).permit(:name, :passout, :course, :college_id,
+        :dob, :gender,:nationality,:marital_status,:spouse_name,:address,
+        :secondary_school, :senior_secondary_school, :graduation, :post_graduation, 
+        :higher_secondary_school, :father_name, :mother_name, :primary_school,
+        :co_curricular, :extra_curricular, :archivements)
     end
 end

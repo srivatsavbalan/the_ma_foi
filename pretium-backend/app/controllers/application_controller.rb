@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  # before_action :validate_login
+  before_action :validate_login
   protect_from_forgery
 
   def validate_login
