@@ -1,0 +1,28 @@
+<table width="50%" height="100px">
+	<tbody>
+		<tr>
+			<td>
+				Username:
+			</td>
+			<td>
+				<input value="mukil101@zoho.com" type="text"  name="username" id="username" placeholder="username"/><br/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Password:
+			</td>
+			<td>
+				<input value="abc123" type="password" name="password" id="password"  placeholder="password">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<input {{action "login"}} type="button" name="login" value="login" />
+			</td>
+		</tr>
+	</tbody>
+</table>
+<div style="display:none" id="loginError">
+Incorrect username or password.
+</div>
