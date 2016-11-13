@@ -7,5 +7,18 @@ export default Ember.Controller.extend({
 	teachers : function() {
         var teachers = this.get('store').findAll('teacher');
         return teachers;
-    }.property('model')
+    }.property('model'),
+    actions: {
+    	viewTeacher: function(teacher){
+    		debugger;
+			this.transitionToRoute('teacher.view',teacher);
+		},
+		editTeacher: function(teacher){
+			this.transitionToRoute('teacher.edit',teacher);
+		},
+		deleteTeacher: function(teacher){
+			teacher.destroyRecord();
+			alert("deleted successfully");
+		}
+	}
 });

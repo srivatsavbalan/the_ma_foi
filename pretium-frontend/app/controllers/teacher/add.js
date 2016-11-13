@@ -31,11 +31,10 @@ export default Ember.Controller.extend({
             param["senior_secondary_school"]=senior_secondary_school;
             param["graduation"]=graduation;
             param["post_graduation"]=post_graduation;
-            debugger;
             var post = this.store.createRecord('teacher', param);
             var thisObj = this;
             post.save().then((savedRecord) => {
-                thisObj.transitionToRoute('teacher');
+                thisObj.transitionToRoute('teacher.view',savedRecord);
             }).catch((xhr) => {
                 console.log("error occurred and res status ", xhr);
                 thisObj.transitionToRoute('/');
