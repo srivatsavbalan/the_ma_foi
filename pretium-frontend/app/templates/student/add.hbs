@@ -1,7 +1,3 @@
-{{#each teachers as |teacher|}}
-	{{teacher.name}},{{teacher.designation}},{{teacher.dob}},{{teacher.gender}},{{teacher.senior_secondary_school}}--->
-	{{#link-to "teacher.edit" teacher}}edit{{/link-to}}<br/>
-{{/each}}
 <div class="holder">
 <div class="top_Bar">
     <div style="float:left">
@@ -29,10 +25,10 @@
 </div>
 <div class="nav_Bar">
     <ul class="routes">
-        <li class=""><span class="common icon_sprite dashboard_icon"></span><span class="common">Dashboard</span></li>
-        <li class=""><span class="common icon_sprite add_student"></span><span class="common">Add Student</span></li>
-    <li class=""><span class="common icon_sprite add_teacher"></span><span class="common">{{#link-to 'teacher'}}Add Teacher {{/link-to}}</span></li>
-    <li class=""><span class="common icon_sprite set_skills"></span><span class="common" style="margin-left:8px">Set Skills</span></li>  
+        <li class=""><span class="common icon_sprite dashboard_icon"></span><span class="common">{{#link-to 'dashboard'}} Dashboard {{/link-to}}</span></li>
+        <li class=""><span class="common icon_sprite add_student"></span><span class="common">{{#link-to 'student/add'}}Add Student {{/link-to}}</span></li>
+    <li class=""><span class="common icon_sprite add_teacher"></span><span class="common">{{#link-to 'teacher/add'}}Add Teacher {{/link-to}}</span></li>
+    <li class=""><span class="common icon_sprite set_skills"></span><span class="common" style="margin-left:8px">{{#link-to 'setskills'}}Set Skills{{/link-to}}</span></li>  
    
     </ul>
 </div>

@@ -3,7 +3,7 @@ import DS from 'ember-data';
 export default DS.Model.extend({
 	name: DS.attr('string'),
 	designation: DS.attr('string'),
-	dob : DS.attr('date'),
+	dob : DS.attr('string'),
 	gender : DS.attr('string'),
 	nationality : DS.attr('string'),
 	marital_status : DS.attr('string'),
