@@ -7,27 +7,32 @@ body,h2,ul,li{
 ul {
     list-style: none;
 }
-
+input  {
+    border: none;
+    outline: none;
+    background: transparent;
+}
 .holder {
     width: 100%;
     height: 803px;
 }
 .nav_Bar {
     width: 20%;
-    height: 100%;
-    background: #313949;
+    height: 80%;
     float: left;
+     background: #262f36;
 }
 .app_Content {
     background: white;
-    float:right;
-    height: 100%;
-    width: 80%;
+        width: 80%;
+    height: 80%;
+    float: right;
+    
 }
 .routes {
     width: 100%;
     color: white;
-    padding-top: 40px;
+    
 }
 
 .routes li {
@@ -35,5 +40,205 @@ ul {
 }
 
 .routes li:hover {
-    background: #cccccc;
+    background: #313a40;
+}
+
+.tabDivCreate {
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    width: 100%;
+    padding: 0;
+}
+
+.labelTabCreate {
+    box-sizing: border-box;
+    position: relative;
+    top: 1px;
+    padding: 19px 6px 6px 0!important;
+    color: #666;
+    display: inline-block;
+    width: 40%;
+    padding-right: 15px;
+}
+
+.newmandatory:after {
+    content: " ";
+    display: inline-block;
+    width: 25px;
+    height: 2px;
+    background: #f27b77;
+    position: absolute;
+    float: left;
+    bottom: -1px;
+    left: 0;
+}
+.labelValCreate {
+    color: #222;
+    width: 60%;
+    vertical-align: bottom;
+    float: right;
+    position: relative;
+    padding: 19px 0 5px 0!important;
+    top: 1px;
+    border-bottom: 1px solid transparent;
+    transition: .3s all ease;
+    
+}
+
+.labelValCreate>input {
+    width: 100%;
+    font-size: 14px;
+    
+} 
+.tabDivCreate:hover>.labelValCreate {
+    border-bottom: 1px solid #a5a5a5;
+}
+.details_ {
+    width: 49%;
+    display: inline-block;
+    padding: 0 2%;
+    box-sizing: border-box;
+}
+.create_Pages {
+    padding: 20px;
+    
+}
+
+.top_Bar {
+    color: white;
+    height: 20%;
+    background: #3a4853;
+    padding: 3.5% 6%;
+    box-sizing: border-box;
+}
+
+.app_name {
+    padding: 5px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.common {
+    padding: 5px;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.top_Common {
+    border-right: 1px solid #ced2d4;
+    height: 54px;
+    padding: 0px 31px;
+}
+
+.recent_Added {
+    padding: 2px 4px;
+    background: #fbfdfc;
+    color: #9cc1e0;
+    font-size: 10px;
+    border-radius: 2px;
+    
+    
+}
+
+.search  {
+    padding: 5px 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+
+.icon_sprite {
+    background-image: url(images/icon-sprite-1x.png);
+    
+    background-repeat: no-repeat;
+   
+}
+.search_icon {
+   background-position: -317px -32px;
+  
+    width: 22px;
+    height: 22px;
+    
+}
+.dashboard_icon {
+    background-position: -274px -35px;
+    width: 27px;
+    height: 17px;
+}
+.add_student {
+        background-position:  -122px -34px;
+    width: 26px;
+    height: 26px;
+}
+.add_teacher {
+    background-position: -73px -35px;
+    width: 23px;
+    height: 22px;
+}
+.set_skills {
+    background-position:  -18px -29px;
+    width: 15px;
+    height: 27px;
+}
+.button {
+    background: #488dc8;
+    padding: 5px 25px;
+    border-radius: 5px;
+}
+.signin_Email {
+display: inline-block;
+vertical-align: middle;
+    width:150px;
+    margin-right: 5px;
+    background: white;
+    border-radius: 5px;
+        height: 30px;
+    padding: 3px;
+    box-sizing: border-box;
+}
+.password {
+     display: inline-block;
+vertical-align: middle;
+    width:150px;
+    margin-right: 5px;
+    background: white;
+    border-radius: 5px;
+        height: 30px;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.signin_button {
+   display: inline-block;
+vertical-align: middle;
+    width:150px;
+    margin-right: 5px;
+    
+    border-radius: 3px;
+}
+.sprite {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url(images/icons.svg);
+}
+.pretblack_logo {
+      background-position: -40px -14px;
+    width: 32px;
+    height: 33px;
+    background-size: cover;
+    background-size: 243px 108px;
+    vertical-align: middle;
+    opacity: 0.3;
+}
+
+.about_Details {
+        padding: 23px 0px;
+    font-size: 18px;
+    box-sizing: border-box;
+    line-height: 29px;
+    text-align: center;
+}
+.entity_one {
+        width: 49%;
+    text-align: center;
 }
