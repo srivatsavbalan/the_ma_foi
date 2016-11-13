@@ -1,21 +1,198 @@
-<input type="text" placeholder="name" id="name" name="name" /><br/>
-<input type="email" placeholder="email" id="email" name="email" /><br/>
-<input type="date" placeholder="dob" id="dob" name="dob" /><br/>
-<input type="radio" checked name="gender" value="Male">Male<br>
-<input type="radio" name="gender" value="Female">Female<br>
-<input type="text" placeholder="nationality" id="nationality" name="nationality" /><br/>
-<TextArea name="address" placeholder="address" id="address"/><br/>
-<input type="text" placeholder="fathername" id="fathername" name="fathername" /><br/>
-<input type="text" placeholder="mothername" id="mothername" name="mothername" /><br/>
-<input type="text" placeholder="spouse_name" id="spouse_name" name="spouse_name" /><br/>
-<input type="text" placeholder="primary_school" id="primary_school" name="primary_school" /><br/>
-<input type="text" placeholder="secondary_school" id="secondary_school" name="secondary_school" /><br/>
-<input type="text" placeholder="senior_secondary_school" id="senior_secondary_school" name="senior_secondary_school" /><br/>
-<input type="text" placeholder="higher_secondary_school" id="higher_secondary_school" name="higher_secondary_school" /><br/>
-<input type="text" placeholder="graduation" id="graduation" name="graduation" /><br/>
-<input type="text" placeholder="post_graduation" id="post_graduation" name="post_graduation" /><br/>
+<div class="holder">
+<div class="top_Bar">
+    <div style="float:left">
+     <div class="top_Common common">
+                    <div class="common" style="border-radius:50%;background:#cccccc"><img src="" width="45px" height="45px"></div>
+                    <div class="common"><div class="app-name">Zoho University</div><span style="font-size:12px">Chennai</span></div>
+                </div>
+    <div class="top_Common common">
+                    
+                    <div class="common"><div class="app-name"><span class="common">Students</span> <span class="recent_Added common">+24</span></div><span style="font-size:12px;margin-left:3px;">1000</span></div>
+                </div>
+    <div class="top_Common common">
+                    
+                    <div class="common"><div class="app-name"><span class="common">Teachers</span><span class="recent_Added common">+12</span></div><span style="font-size:12px;margin-left:5px">100</span></div>
+                </div>
+        </div>
+    <div style="float:right">
+        <div class="search">
+            <span class="common icon_sprite search_icon"></span>
+            <span class = "common"><input type="search" placeholder="search students or staffss.." style="width: 200px;"></span></div>
+    
+    </div>
+    <div style="clear:both"></div>
+    
+</div>
+<div class="nav_Bar">
+    <ul class="routes">
+        <li class=""><span class="common icon_sprite dashboard_icon"></span><span class="common">Dashboard</span></li>
+        <li class=""><span class="common icon_sprite add_student"></span><span class="common">Add Student</span></li>
+    <li class=""><span class="common icon_sprite add_teacher"></span><span class="common">Add Teacher</span></li>
+    <li class=""><span class="common icon_sprite set_skills"></span><span class="common" style="margin-left:8px">Set Skills</span></li>  
+   
+    </ul>
+</div>
 
-<textarea id="co_curricular" name="co_curricular" placeholder="Co Curricular"></textarea><br/>
-<textarea id="etc_curricular" name="etc_curricular" placeholder="Extra Curricular"></textarea><br/>
-<textarea id="achievements" name="achievements" placeholder="Achievements"></textarea><br/>
-<input type="button" value="Click to add" {{action "saveRecords"}}/>
+<div class="app_Content">
+     <div class="button" style="width:100px;color:white;float:right;margin-right:25px;margin-top:20px" {{action "saveRecords"}}>Click to add</div>
+        <div class="create_Pages" style="margin-top:60px">
+
+           <div class="details_">
+
+
+                <input id="student_id" type="hidden" value="{{model.id}}">
+
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Name</div>
+                    <div class="labelValCreate">
+                    	<input value="{{model.name}}" type="text" placeholder="name" id="name" name="name" />
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Email</div>
+                    <div class="labelValCreate "><input value="{{model.email}}" type="email" placeholder="email" id="email" name="email" /></div>
+                    <div class="clearB"></div>
+                </div>
+                     <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Date of Birth</div>
+                    <div class="labelValCreate" style="padding: 16px 0 5px 0!important;">
+                    	<input value="{{model.dob}}" type="date" placeholder="dob" id="dob" name="dob" />
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Gender</div>
+                    <div class="labelValCreate ">
+  {{#if (eq model.gender "Male")}}
+	<input type="radio" checked name="gender" value="Male">Male
+	<input type="radio" name="gender" value="Female">Female
+{{/if}}
+{{#if (eq model.gender "Female")}}
+	<input type="radio" name="gender" value="Male">Male
+	<input type="radio" checked name="gender" value="Female">Female
+{{/if}}
+
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+                      <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Nationality</div>
+                    <div class="labelValCreate">
+                    	<input value="{{model.nationality}}" type="text" placeholder="nationality" id="nationality" name="nationality" />
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Address</div>
+                    <div class="labelValCreate ">
+
+                    		<textarea name="address" id="address" placeholder="address">{{model.address}}</textarea>
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+                      <div class=" tabDivCreate">
+                    <div class="labelTabCreate">Father</div>
+                    <div class="labelValCreate">
+                    	<input value="{{model.fathername}}" type="text" placeholder="fathername" id="fathername" name="fathername" />
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate">
+                    <div class="labelTabCreate">Mother</div>
+                    <div class="labelValCreate ">
+                    		<input value="{{model.mothername}}" type="text" placeholder="mothername" id="mothername" name="mothername" />
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+            </div>
+            </div>
+            <div class="details_">
+
+                  <div class=" tabDivCreate">
+                    <div class="labelTabCreate">Spouse</div>
+                    <div class="labelValCreate">
+                    	<input value="{{model.spouse_name}}" type="text" placeholder="spouse_name" id="spouse_name" name="spouse_name" />
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate">
+                    <div class="labelTabCreate">Primary School</div>
+                    <div class="labelValCreate "><input value="{{model.primary_school}}" type="text" placeholder="primary_school" id="primary_school" name="primary_school" /></div>
+                    <div class="clearB"></div>
+                </div>
+                     <div class=" tabDivCreate" >
+                    <div class="labelTabCreate"> Secondary School</div>
+                    <div class="labelValCreate">
+                    	<input value="{{model.secondary_school}}" type="text" placeholder="secondary_school" id="secondary_school" name="secondary_school" />
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+
+                    <div class=" tabDivCreate" >
+                    <div class="labelTabCreate"> Senior Secondary School</div>
+                    <div class="labelValCreate">
+                    	<input value="{{model.senior_secondary_school}}" type="text" placeholder="secondary_school" id="senior_secondary_school" name="secondary_school" />
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+                <div class=" tabDivCreate" >
+                    <div class="labelTabCreate"> Higher Secondary School</div>
+                    <div class="labelValCreate">
+                    	<input value="{{model.higher_secondary_school}}" type="text" placeholder="higher_secondary_school" id="higher_secondary_school" name="higher_secondary_school" />
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Graduation</div>
+                    <div class="labelValCreate ">
+                    <input value="{{model.graduation}}" type="text" placeholder="graduation" id="graduation" name="graduation" />
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+
+                   <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Post Graduation</div>
+                    <div class="labelValCreate ">
+                    <input value="{{model.post_graduation}}" type="text" placeholder="post_graduation" id="post_graduation" name="post_graduation" />
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+                    <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">co-curricular</div>
+                    <div class="labelValCreate ">
+                   
+<textarea id="co_curricular" name="co_curricular" placeholder="Co Curricular">{{model.co_curricular}}</textarea>
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+                 <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Extra curricular</div>
+                    <div class="labelValCreate ">
+                   
+<textarea id="etc_curricular" name="etc_curricular" placeholder="Extra Curricular">{{model.extra_curricular}}</textarea>
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+                 <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Achievements</div>
+                    <div class="labelValCreate ">
+                   
+<textarea id="achievements" name="achievements" placeholder="Achievements">{{model.archivements}}</textarea>
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+               
+               
+                  
+                 
+            </div>
+     
+</div>
+    
+</div>
+</div>
+
+
+
+
+
