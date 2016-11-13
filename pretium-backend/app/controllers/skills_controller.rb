@@ -8,6 +8,20 @@ class SkillsController < ApplicationController
     @skills = Skill.all
   end
 
+  def skills_categories
+    @skills_categories = SkillsCategory.all
+    respond_to do |format|
+      format.json { render json: {skills_categories: @skills_categories}, status: :ok }
+    end
+  end
+
+  def skills_sub_categories
+    @skills_sub_categories = SkillsSubCategory.all
+    respond_to do |format|
+      format.json { render json: {skills_sub_categories: @skills_sub_categories}, status: :ok }
+    end
+  end
+
   # GET /skills/1
   # GET /skills/1.json
   def show
@@ -29,8 +43,7 @@ class SkillsController < ApplicationController
 
     respond_to do |format|
       if @skill.save
-        format.html { redirect_to @skill, notice: 'Skill was successfully created.' }
-        format.json { render :show, status: :created, location: @skill }
+        format.json { render json: {skill: @skill}, status: :ok }
       else
         format.html { render :new }
         format.json { render json: @skill.errors, status: :unprocessable_entity }
@@ -70,6 +83,6 @@ class SkillsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def skill_params
-      params.require(:skill).permit(:name)
+      params.require(:skill).permit(:name, :skills_sub_category_id)
     end
 end
