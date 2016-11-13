@@ -33,15 +33,15 @@
                 <table>
                     <tbody>
                         <tr>
-                            <th>id</th><th>name</th><th>links</th>
+                            <th>id</th><th>name</th><th colspan="3">links</th>
                         </tr>
 {{#each teachers as |teacher|}}
         <tr>
             <td>{{teacher.id}}</td>
             <td>{{teacher.name}}</td>
-            <td><i style="cursor:pointer" class="material-icons" {{action "viewTeacher" teacher}}>view</i></td>
-            <td><i style="cursor:pointer" class="material-icons" {{action "editTeacher" teacher}}>edit</i></td>
-            <td><i style="cursor:pointer" class="material-icons" {{action "deleteTeacher" teacher}}>delete</i></td>
+            <td><i class="button" {{action "viewTeacher" teacher}}>View</i></td>
+            <td><i class="button" {{action "editTeacher" teacher}}>Edit</i></td>
+            <td><i class="button" {{action "deleteTeacher" teacher}}>Delete</i></td>
         </tr>
 {{/each}}
                     </tbody>

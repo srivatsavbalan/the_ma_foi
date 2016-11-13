@@ -260,3 +260,16 @@ vertical-align: middle;
 .clearB {
     clear: both;
 }
+table {
+    width: 100%
+}
+table, th, td {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+td {
+    font-size: 14px;
+    padding: 15px;
+    color: #333333;
+    vertical-align: middle;
+}
