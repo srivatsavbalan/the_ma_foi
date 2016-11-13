@@ -18,6 +18,7 @@
     </ul>
 </div>
 <div class="app_Content">
+        <b>Student</b>
         <div class="create_Pages" style="margin-top:60px">
 
             <div class="details_">
@@ -30,9 +31,9 @@
         <tr>
             <td>{{student.id}}</td>
             <td>{{student.name}}</td>
-            <td><i class="button" {{action "viewStudent" Student}}>View</i></td>
-            <td><i class="button" {{action "editStudent" Student}}>Edit</i></td>
-            <td><i class="button" {{action "deleteStudent" Student}}>Delete</i></td>
+            <td><i class="button" {{action "viewStudent" student}}>View</i></td>
+            <td><i class="button" {{action "editStudent" student}}>Edit</i></td>
+            <td><i class="button" {{action "deleteStudent" student}}>Delete</i></td>
         </tr>
 {{/each}}
                     </tbody>

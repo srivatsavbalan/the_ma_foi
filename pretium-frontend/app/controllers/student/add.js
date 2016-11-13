@@ -51,7 +51,6 @@ export default Ember.Controller.extend({
             }).catch((xhr) => {
                 console.log("error occurred and res status ", xhr);
                 thisObj.transitionToRoute('/');
-                Materialize.toast('An error occurred, Please try again later', 4000); // 4000 is the duration of the toast
             });
         }
     }
