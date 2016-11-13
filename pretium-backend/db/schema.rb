@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161112223808) do
+ActiveRecord::Schema.define(version: 20161113095313) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -96,6 +96,7 @@ ActiveRecord::Schema.define(version: 20161112223808) do
     t.string   "co_curricular"
     t.string   "extra_curricular"
     t.string   "archivements"
+    t.string   "email"
   end
 
   create_table "teachers", force: :cascade do |t|
@@ -117,6 +118,7 @@ ActiveRecord::Schema.define(version: 20161112223808) do
     t.string   "graduation"
     t.string   "post_graduation"
     t.string   "higher_secondary_school"
+    t.string   "email"
   end
 
   create_table "users", force: :cascade do |t|
