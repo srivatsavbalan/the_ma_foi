@@ -22,6 +22,7 @@ input[type=text], input[type=search] {
     height: 80%;
     float: left;
      background: #262f36;
+     position: relative;
 }
 .app_Content {
     background: white;
@@ -103,6 +104,8 @@ input[type=text], input[type=search] {
 }
 .create_Pages {
     padding: 20px;
+    overflow: auto;
+    height: 80%;
     
 }
 
@@ -273,3 +276,6 @@ td {
     color: #333333;
     vertical-align: middle;
 }
+.charts {
+    width: 100%;
+    height: 250px;}

@@ -2,10 +2,13 @@
 <div class="top_Bar">
     <div style="float:left">
      <div class="top_Common common">
-                    <div class="common" style="border-radius:50%;background:#cccccc"><img src="" width="45px" height="45px"></div>
+                    <div class="common" style="border-radius:50%;background:#cccccc">
+                    <div style="width:45px;height:45px"></div>
+
+                    </div>
                     <div class="common"><div class="app-name">Anna</div><span style="font-size:12px">Chennai</span></div>
                 </div>
-  
+  <div class="common" style="font-size: 30px">Pretium</div>
         </div>
   
     <div style="clear:both"></div>
@@ -16,6 +19,7 @@
        
    
     </ul>
+     <span style = "position:absolute;bottom: 5px;right:5px; color:white"> Logout </span>
 </div>
 <div class="app_Content">
         <div class="create_Pages" style="margin-top:60px">
@@ -24,15 +28,15 @@
                 <table>
                     <tbody>
                         <tr>
-                            <th>id</th><th>name</th><th colspan="3">links</th>
+                           <th>Name</th><th colspan="3">Actions</th>
                         </tr>
 {{#each students as |student|}}
         <tr>
-            <td>{{student.id}}</td>
+            
             <td>{{student.name}}</td>
-            <td><i class="button" {{action "viewStudent" Student}}>View</i></td>
-            <td><i class="button" {{action "editStudent" Student}}>Edit</i></td>
-            <td><i class="button" {{action "deleteStudent" Student}}>Delete</i></td>
+            <td><i class="button"  style="background:white" {{action "viewStudent" Student}}><img src="/assets/images/view.png"></i></td>
+            <td><i class="button"  style="background:white"  {{action "editStudent" Student}}><img src="/assets/images/edit.png"></i></td>
+            <td><i class="button"  style="background:white"  {{action "deleteStudent" Student}}><img src="/assets/images/delete.png"></i></td>
         </tr>
 {{/each}}
                     </tbody>
