@@ -2,10 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 	init: function () {
-		var role = window.localStorage.getItem("role");
-		if(role){
-			this.transitionToRoute(role);
-		}
+		// var role = window.localStorage.getItem("role");
+		// if(role){
+		// 	this.transitionToRoute(role);
+		// }
 	},
 	actions: {
         login() {
@@ -33,7 +33,7 @@ export default Ember.Controller.extend({
 					role=repos.role;
 				}
 				window.localStorage.setItem("role",role);
-				slf.transitionToRoute(role);
+				slf.transitionToRoute('teacher');
 			}, function(a,b,c){
 				Ember.$("#loginError").show();
 				setTimeout(function(){Ember.$("#loginError").hide()}, 2000);

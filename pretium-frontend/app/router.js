@@ -7,29 +7,31 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-    this.route('user', { path: '/user' },function() {
-        this.route('login',{"path" : "/"});
-        this.route('login');
-        this.route('logout');
-  	});
-  	this.route('dashboard', {path:'dashboard'});
-  	this.route('setskills', {path:'setskills'});
+  this.route('user', { path: '/user' },function() {
+      this.route('login',{"path" : "/"});
+      this.route('login');
+      this.route('logout');
+  });
+  this.route('rating.index',{"path" : "/rating"});
 
-	this.route('teacher.index', {path:'/teacher'});
-  	this.route('teacher.add', {path:'/teacher/add'});
-	this.route('teacher', {path:'/teacher/:teacher_id'},function(){
-		this.route('view');
-		this.route('edit');
-	});
-	this.route('student.index', {path:'/student'});
-	this.route('student.add', {path:'/student/add'});
-	this.route('student', {path:'/student/:student_id'},function(){
-		this.route('view');
-		this.route('edit');
-	});
-	this.route('guest', {path:'/guest'},function(){
-	});
+  this.route('dashboard', {path:'dashboard'});
+  this.route('setskills', {path:'setskills'});
 
+this.route('teacher.index', {path:'/'});
+  this.route('teacher.index', {path:'/teacher'});
+  this.route('teacher.add', {path:'/teacher/add'});
+  this.route('teacher', {path:'/teacher/:teacher_id'},function(){
+      this.route('view');
+      this.route('edit');
+  });
+  this.route('student.index', {path:'/student'});
+  this.route('student.add', {path:'/student/add'});
+  this.route('student', {path:'/student/:student_id'},function(){
+      this.route('view');
+      this.route('edit');
+  });
+  this.route('guest', {path:'/guest'},function(){
+  });
 });
 
 export default Router;
