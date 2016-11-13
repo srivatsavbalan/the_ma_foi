@@ -32,7 +32,6 @@ class TeachersController < ApplicationController
   # POST /teachers.json
   def create
     @teacher = Teacher.new(teacher_params)
-
     respond_to do |format|
       if @teacher.save
         format.json { render json: {teacher: @teacher}, status: :ok }
@@ -76,6 +75,6 @@ class TeachersController < ApplicationController
     def teacher_params
       params.require(:teacher).permit(:name, :specialisation, :college_id, 
         :designation, :dob, :gender,:nationality,:marital_status,:spouse_name,:address, :contact_number,
-        :secondary_school, :senior_secondary_school, :graduation, :post_graduation, :higher_secondary_school)
+        :secondary_school, :senior_secondary_school, :email, :graduation, :post_graduation, :higher_secondary_school)
     end
 end

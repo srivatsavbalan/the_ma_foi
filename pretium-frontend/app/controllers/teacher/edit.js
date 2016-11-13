@@ -34,17 +34,15 @@ export default Ember.Controller.extend({
             param["address"] = address;
 
         let rec = this.store.findRecord('teacher', teacher_id);
-        let slf= this;
+        let thisObj= this;
         rec.then(function(teacher) {
             for (var key in param) {
                 if (param.hasOwnProperty(key)) {
                     teacher.set(key,param[key]);
                 }
             }
-
-
             teacher.save();
-            slf.transitionToRoute('teacher');
+            thisObj.transitionToRoute('teacher.view',teacher);
          });
     }
   }

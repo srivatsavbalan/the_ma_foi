@@ -1,8 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-			model() {
-		let teacher = this.modelFor("teacher");
-		return teacher;
+	model() {
+		return this.get('store').findAll('teacher');
   	}
 });

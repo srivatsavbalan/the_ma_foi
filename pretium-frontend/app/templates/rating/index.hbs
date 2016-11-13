@@ -1,0 +1,17 @@
+
+<select name="student" id="student">
+{{#each students as |student|}}
+	<option value="{{student.id}}">{{student.name}}</option>
+{{/each}}
+</select>
+<br/>
+<select name="skills" id="skills">
+{{#each skills as |skills|}}
+		<option value="{{skills.id}}">{{skills.name}}</option>
+{{/each}}
+</select>
+<br/>
+<input type="number" name="rating" id="rating" placeholder="rating"/>
+<br/>
+<textarea id="review" name="review"></textarea><br/>
+<input type="button" {{action "saveRating"}} value="save"/>

@@ -17,5 +17,6 @@ export default DS.Model.extend({
 	post_graduation: DS.attr('string'),
 	co_curricular: DS.attr('string'),
 	extra_curricular: DS.attr('string'),
-	archivements: DS.attr('string')
+	archivements: DS.attr('string'),
+	pretium_rating: DS.attr('string')
 });
