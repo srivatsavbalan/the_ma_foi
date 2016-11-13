@@ -1,0 +1,1 @@
+json.partial! "request_ratings/request_rating", request_rating: @request_rating

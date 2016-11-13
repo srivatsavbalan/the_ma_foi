@@ -1,0 +1,146 @@
+
+
+
+<div class="holder">
+<div class="top_Bar">
+    <div style="float:left">
+     
+                    
+                    <div class="common"><div class="app-name"><span class="common">{{#link-to 'student' tagName="span"}}Students{{/link-to}}</span> <span class="recent_Added common">+24</span></div><span style="font-size:12px;margin-left:3px;">1000</span></div>
+
+                </div>
+    
+    <div style="float:right">
+        <div class="search">
+            <span class="common icon_sprite search_icon"></span>
+            <span class = "common"><input type="search" placeholder="search students" style="width: 200px;"></span></div>
+    
+    </div>
+    <div style="clear:both"></div>
+    
+</div>
+<div class="nav_Bar">
+    <ul class="routes">
+       
+        <li class=""><span class="common icon_sprite add_student"></span><span class="common">Rated Students</span></li>
+    <li class=""><span class="common icon_sprite add_teacher"></span><span class="common">{{#link-to 'teacher' tagName ="span"}}Unrated Students{{/link-to}}</span></li>
+   
+   
+    </ul>
+</div>
+<div class="app_Content">
+ 	 <div class="button" style="width:40px;color:white;float:right;margin-right:25px;margin-top:20px" {{action "saveRecords"}}>Save</div>
+        <div class="create_Pages" style="margin-top:60px">
+
+            <div class="details_">
+
+
+                <input id="teacher_id" type="hidden" value="{{model.id}}">
+
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Name</div>
+                    <div class="labelValCreate">
+                    	<input value="{{model.name}}" type="text" placeholder="name" id="name" name="name" />
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Designation</div>
+                    <div class="labelValCreate "><input value="{{model.designation}}" type="text" placeholder="designation" id="designation" name="designation" /></div>
+                    <div class="clearB"></div>
+                </div>
+                     <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Date of Birth</div>
+                    <div class="labelValCreate" style="padding: 16px 0 5px 0!important;">
+                    	<input value="{{model.dob}}" type="date" placeholder="dob" id="dob" name="dob" /><br/>
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Gender</div>
+                    <div class="labelValCreate ">
+                    	{{#if (eq model.gender "Male")}}
+	<input type="radio" checked name="gender" value="Male">Male
+	<input type="radio" name="gender" value="Female">Female<br>
+{{/if}}
+{{#if (eq model.gender "Female")}}
+	<input type="radio" name="gender" value="Male">Male<br>
+	<input type="radio" checked name="gender" value="Female">Female
+{{/if}}
+
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+                      <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Nationality</div>
+                    <div class="labelValCreate">
+                    	<input value="{{model.nationality}}" type="text" placeholder="nationality" id="nationality" name="nationality" />
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Marital_Status</div>
+                    <div class="labelValCreate "><input value="{{model.marital_status}}" type="text" placeholder="marital_status" id="marital_status" name="marital_status" /></div>
+                    <div class="clearB"></div>
+                </div>
+                      <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Spouse</div>
+                    <div class="labelValCreate">
+                    	<input value="{{model.spouse_name}}" type="text" placeholder="spouse_name" id="spouse_name" name="spouse_name" />
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Address</div>
+                    <div class="labelValCreate "><textarea id="address" name="address" >{{model.address}}</textarea></div>
+                    <div class="clearB"></div>
+                </div>
+            </div>
+            <div class="details_">
+
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Phone</div>
+                    <div class="labelValCreate">
+                    	<input value="{{model.contact_number}}" type="text" placeholder="contact_number" id="contact_number" name="contact_number" />
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Secondary School</div>
+                    <div class="labelValCreate "><input value="{{model.secondary_school}}" type="text" placeholder="secondary_school" id="secondary_school" name="secondary_school" /></div>
+                    <div class="clearB"></div>
+                </div>
+                     <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Senior Secondary School</div>
+                    <div class="labelValCreate">
+                    	<input value="{{model.senior_secondary_school}}" type="text" placeholder="senior_secondary_school" id="senior_secondary_school" name="senior_secondary_school" />
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Graduation</div>
+                    <div class="labelValCreate ">
+                    <input value="{{model.graduation}}" type="text" placeholder="graduation" id="graduation" name="graduation" />
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+
+                   <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Post Graduation</div>
+                    <div class="labelValCreate ">
+                    <input value="{{model.post_graduation}}" type="text" placeholder="post_graduation" id="post_graduation" name="post_graduation" />
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+               
+               
+                  
+                 
+            </div>
+            
+    </div>
+    
+</div>
+    
+</div>
+

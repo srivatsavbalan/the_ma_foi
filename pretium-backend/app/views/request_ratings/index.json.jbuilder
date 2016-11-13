@@ -1,0 +1,1 @@
+json.array! @request_ratings, partial: 'request_ratings/request_rating', as: :request_rating

@@ -1,16 +1,23 @@
 class RatingsController < ApplicationController
   skip_before_action :verify_authenticity_token
+  skip_before_action :validate_login, only: [:metrics]
   before_action :set_rating, only: [:show, :edit, :update, :destroy]
 
   # GET /ratings
   # GET /ratings.json
   def index
     @ratings = Rating.all
+    respond_to do |format|
+      format.json { render json: {ratings: @ratings}, status: :ok }
+    end
   end
 
   # GET /ratings/1
   # GET /ratings/1.json
   def show
+    respond_to do |format|
+      format.json { render json: {rating: @rating}, status: :ok }
+    end
   end
 
   # GET /ratings/new
@@ -26,11 +33,12 @@ class RatingsController < ApplicationController
   # POST /ratings.json
   def create
     @rating = Rating.new(rating_params)
-
+    if params[:request_rating]
+      RequestRating.find(params[:request_rating]).update(status: "true")
+    end
     respond_to do |format|
       if @rating.save
-        format.html { redirect_to @rating, notice: 'Rating was successfully created.' }
-        format.json { render :show, status: :created, location: @rating }
+        format.json { render json: {rating: @rating}, status: :ok }
       else
         format.html { render :new }
         format.json { render json: @rating.errors, status: :unprocessable_entity }
@@ -62,6 +70,12 @@ class RatingsController < ApplicationController
     end
   end
 
+  def metrics
+    respond_to do |format|
+      format.json { render json: {total_number_of_ratings: Rating.count}}
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_rating
@@ -70,6 +84,6 @@ class RatingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rating_params
-      params.require(:rating).permit(:student_id, :skill_id, :teacher_id, :rating)
+      params.require(:rating).permit(:student_id, :skill_id, :teacher_id, :rating, :review)
     end
 end
