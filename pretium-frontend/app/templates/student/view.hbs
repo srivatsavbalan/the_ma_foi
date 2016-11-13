@@ -18,6 +18,7 @@
     </ul>
 </div>
 <div class="app_Content">
+
    <div class="button" style="width:40px;color:white;float:right;margin-right:25px;margin-top:20px"> {{#link-to 'student.edit' model  tagName ="span"}}Edit{{/link-to}}</div>
  <div class="button" style="width:40px;color:white;float:right;margin-right:25px;margin-top:20px"> {{#link-to 'student' model  tagName ="span"}}Back{{/link-to}}</div>
 
@@ -35,6 +36,16 @@
                     </div>
                     <div class="clearB"></div>
                 </div>
+                {{#if model.pretium_rating}}
+                <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Rating</div>
+                    <div class="labelValCreate nohover">
+                        <span>{{model.pretium_rating}}</span>
+                    </div>
+                    <div class="clearB"></div>
+                </div>
+                {{/if}}
+
                   <div class=" tabDivCreate" >
                     <div class="labelTabCreate">Email</div>
                     <div class="labelValCreate  nohover">
