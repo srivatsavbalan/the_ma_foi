@@ -179,20 +179,26 @@
                     <div class="clearB"></div>
                 </div>
             </div>
-     </div>
-     <div>
+            <div class="create_Pages" style="height:300px;padding: 0% 27%;margin-top: 50px;">
         <b>Rating</b><br/>
-
+<div style="padding: 20px">
 <select name="skills" id="skills">
 {{#each skills as |skills|}}
         <option value="{{skills.id}}">{{skills.name}}</option>
 {{/each}}
 </select>
-<br/>
+</div>
+<div style="padding: 20px">
 <input type="number" name="rating" id="rating" placeholder="rating"/>
-<br/>
+</div>
+<div style="padding: 20px">
 <textarea id="review" name="review"></textarea><br/>
-<input type="button" {{action "saveRating"}} value="save"/>
+</div>
+<div style="padding: 20px">
+<span class="button" style="width:100px;color:white" {{action "saveRating"}}> Save </span>
+</div>
      </div>
 </div>
+     </div>
+     
 </div>
