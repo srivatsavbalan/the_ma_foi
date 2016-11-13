@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-			model() {
-		let teacher = this.modelFor("teacher");
-		return teacher;
+	model() {
+		var id = window.localStorage.getItem("userid");
+    	return this.get('store').findRecord('teacher',id);
   	}
 });
