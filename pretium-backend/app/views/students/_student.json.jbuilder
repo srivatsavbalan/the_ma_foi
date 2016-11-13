@@ -1,2 +1,3 @@
-json.extract! student, :id, :name, :passout, :course, :college_id, :created_at, :updated_at
+json.extract! student,:id, :name, :passout, :course, :college_id,:dob, :gender,:nationality,:spouse_name,:address,:secondary_school, :senior_secondary_school, :graduation, :post_graduation,:higher_secondary_school, :father_name, :mother_name, :primary_school,:co_curricular, :extra_curricular, :archivements, :gender
+json.pretium_rating Rating.where(student_id: student.id).sum(:rating)
 json.url student_url(student, format: :json)

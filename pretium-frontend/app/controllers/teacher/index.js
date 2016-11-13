@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 	init: function () {
-		if(window.localStorage.role!=="admin"){
+		if(window.localStorage.role!=="ADMIN"){
 			let id = window.localStorage.getItem("userid");
 			var teacher = this.get('store').findRecord('teacher',id);
 			this.transitionToRoute('teacher.view',teacher);

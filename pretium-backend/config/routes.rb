@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'skills_categories', to: 'skills#skills_categories'
   get 'skills_sub_categories', to: 'skills#skills_sub_categories'
   get 'metrics', to: 'ratings#metrics'
+  get 'reports', to: 'reports#reports'
   # devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,1 +1,3 @@
-json.partial! "students/student", student: @student
+json.student do
+  json.partial! "students/student", student: @student
+end

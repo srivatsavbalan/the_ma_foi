@@ -12,9 +12,12 @@ Router.map(function() {
       this.route('login');
       this.route('logout');
   });
+  this.route('rating.index',{"path" : "/rating"});
+
   this.route('dashboard', {path:'dashboard'});
   this.route('setskills', {path:'setskills'});
 
+this.route('teacher.index', {path:'/'});
   this.route('teacher.index', {path:'/teacher'});
   this.route('teacher.add', {path:'/teacher/add'});
   this.route('teacher', {path:'/teacher/:teacher_id'},function(){
@@ -29,7 +32,6 @@ Router.map(function() {
   });
   this.route('guest', {path:'/guest'},function(){
   });
-
   this.route('admin', function() {
     this.route('report');
   });
