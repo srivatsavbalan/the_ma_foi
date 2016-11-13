@@ -7,10 +7,11 @@ body,h2,ul,li{
 ul {
     list-style: none;
 }
-input  {
+input[type=text], input[type=search] {
     border: none;
     outline: none;
     background: transparent;
+    
 }
 .holder {
     width: 100%;
@@ -85,7 +86,7 @@ input  {
     
 }
 
-.labelValCreate>input {
+.labelValCreate>input[type=text] {
     width: 100%;
     font-size: 14px;
     
@@ -98,6 +99,7 @@ input  {
     display: inline-block;
     padding: 0 2%;
     box-sizing: border-box;
+    vertical-align: top;
 }
 .create_Pages {
     padding: 20px;
@@ -250,4 +252,11 @@ vertical-align: middle;
     background-size: cover;
     background-size: 333px 209px;
     vertical-align: middle;
+}
+
+.tabDivCreate:hover>.nohover {
+    border-bottom: 1px solid #f0f0f0;
+}
+.clearB {
+    clear: both;
 }
