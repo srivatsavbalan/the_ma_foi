@@ -13,8 +13,6 @@
 </div>
 <div class="nav_Bar">
     <ul class="routes">
-
-
     </ul>
 </div>
 <div class="app_Content">
@@ -176,12 +174,21 @@
                     </div>
                     <div class="clearB"></div>
                 </div>
-
-
-
-
             </div>
      </div>
-</div>
+     <div>
+        <b>Rating</b><br/>
 
+<select name="skills" id="skills">
+{{#each skills as |skills|}}
+        <option value="{{skills.id}}">{{skills.name}}</option>
+{{/each}}
+</select>
+<br/>
+<input type="number" name="rating" id="rating" placeholder="rating"/>
+<br/>
+<textarea id="review" name="review"></textarea><br/>
+<input type="button" {{action "saveRating"}} value="save"/>
+     </div>
+</div>
 </div>
