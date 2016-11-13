@@ -32,6 +32,9 @@ this.route('teacher.index', {path:'/'});
   });
   this.route('guest', {path:'/guest'},function(){
   });
+  this.route('admin', function() {
+    this.route('report');
+  });
 });
 
 export default Router;
