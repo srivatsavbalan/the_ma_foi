@@ -1,5 +1,6 @@
 class RatingsController < ApplicationController
   skip_before_action :verify_authenticity_token
+  skip_before_action :validate_login, only: [:metrics]
   before_action :set_rating, only: [:show, :edit, :update, :destroy]
 
   # GET /ratings
@@ -66,6 +67,12 @@ class RatingsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to ratings_url, notice: 'Rating was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def metrics
+    respond_to do |format|
+      format.json { render json: {total_number_of_ratings: Rating.count}}
     end
   end
 

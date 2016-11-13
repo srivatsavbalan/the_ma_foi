@@ -10,11 +10,12 @@ class StudentsController < ApplicationController
     if role == User.ROLES[0]
       @students = Student.all
     elsif role == User.ROLES[1]
-      @students = Student.where(college_id: current_user.teacher.college_id)
+      @teacher = Teacher.find(current_user.id)
+      @students = Student.where(college_id: @teacher.college_id).includes(:ratings)
     end
-    respond_to do |format|
-      format.json { render json: {students: @students}, status: :ok }
-    end
+    # respond_to do |format|
+    #   format.json { render json: {students: @students}, status: :ok }
+    # end
   end
 
   # GET /students/1
