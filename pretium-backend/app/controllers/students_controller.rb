@@ -20,10 +20,10 @@ class StudentsController < ApplicationController
 
   # GET /students/1
   # GET /students/1.json
-  def show
-    respond_to do |format|
-      format.json { render json: {student: @student}, status: :ok }
-    end
+  def show 
+    # respond_to do |format|
+    #   format.json { render json: {student: @student}, status: :ok }
+    # end
   end
 
   # GET /students/new
