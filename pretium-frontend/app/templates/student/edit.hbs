@@ -1,0 +1,28 @@
+<input id="student_id" type="hidden" value="{{model.id}}">
+<input value="{{model.name}}" type="text" placeholder="name" id="name" name="name" /><br/>
+<input value="{{model.email}}" type="email" placeholder="email" id="email" name="email" /><br/>
+<input value="{{model.dob}}" type="date" placeholder="dob" id="dob" name="dob" /><br/>
+{{#if (eq model.gender "Male")}}
+	<input type="radio" checked name="gender" value="Male">Male<br>
+	<input type="radio" name="gender" value="Female">Female<br>
+{{/if}}
+{{#if (eq model.gender "Female")}}
+	<input type="radio" name="gender" value="Male">Male<br>
+	<input type="radio" checked name="gender" value="Female">Female<br>
+{{/if}}
+<input value="{{model.nationality}}" type="text" placeholder="nationality" id="nationality" name="nationality" /><br/>
+<textarea name="address" id="address" placeholder="address">{{model.address}}</textarea><br/>
+<input value="{{model.fathername}}" type="text" placeholder="fathername" id="fathername" name="fathername" /><br/>
+<input value="{{model.mothername}}" type="text" placeholder="mothername" id="mothername" name="mothername" /><br/>
+<input value="{{model.spouse_name}}" type="text" placeholder="spouse_name" id="spouse_name" name="spouse_name" /><br/>
+<input value="{{model.primary_school}}" type="text" placeholder="primary_school" id="primary_school" name="primary_school" /><br/>
+<input value="{{model.secondary_school}}" type="text" placeholder="secondary_school" id="secondary_school" name="secondary_school" /><br/>
+<input value="{{model.senior_secondary_school}}" type="text" placeholder="senior_secondary_school" id="senior_secondary_school" name="senior_secondary_school" /><br/>
+<input value="{{model.higher_secondary_school}}" type="text" placeholder="higher_secondary_school" id="higher_secondary_school" name="higher_secondary_school" /><br/>
+<input value="{{model.graduation}}" type="text" placeholder="graduation" id="graduation" name="graduation" /><br/>
+<input value="{{model.post_graduation}}" type="text" placeholder="post_graduation" id="post_graduation" name="post_graduation" /><br/>
+
+<textarea id="co_curricular" name="co_curricular" placeholder="Co Curricular">{{model.co_curricular}}</textarea><br/>
+<textarea id="etc_curricular" name="etc_curricular" placeholder="Extra Curricular">{{model.extra_curricular}}</textarea><br/>
+<textarea id="achievements" name="achievements" placeholder="Achievements">{{model.archivements}}</textarea><br/>
+<input type="button" value="Click to add" {{action "saveRecords"}}/>

@@ -12,12 +12,17 @@ Router.map(function() {
         this.route('login');
         this.route('logout');
   	});
+  	this.route('dashboard', {path:'dashboard'});
+  	this.route('setskills', {path:'setskills'});
+
   	this.route('teacher.add', {path:'/teacher/add'});
   	this.route('teacher.index', {path:'/teacher'});
 	this.route('teacher', {path:'/teacher/:teacher_id'},function(){
 		this.route('edit');
 	});
-	this.route('student', {path:'/student'},function(){
+	this.route('student.add', {path:'/student/add'});
+	this.route('student', {path:'/student/:student_id'},function(){
+		this.route('edit');
 	});
 	this.route('guest', {path:'/guest'},function(){
 	});
