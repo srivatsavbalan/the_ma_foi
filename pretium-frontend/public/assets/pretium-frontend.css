@@ -184,6 +184,7 @@ input  {
     background: #488dc8;
     padding: 5px 25px;
     border-radius: 5px;
+    cursor: pointer;
 }
 .signin_Email {
 display: inline-block;
@@ -241,4 +242,12 @@ vertical-align: middle;
 .entity_one {
         width: 49%;
     text-align: center;
+}
+.logout_pret {
+         background-position: -264px -106px;
+    width: 55px;
+    height: 71px;
+    background-size: cover;
+    background-size: 333px 209px;
+    vertical-align: middle;
 }
