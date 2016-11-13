@@ -5,7 +5,13 @@ class StudentsController < ApplicationController
   # GET /students
   # GET /students.json
   def index
-    @students = Student.all
+    role = current_user.role
+    @students = nil
+    if role == User.ROLES[0]
+      @students = Student.all
+    elsif role == User.ROLES[1]
+      @students = Student.where(college_id: current_user.teacher.college_id)
+    end
     respond_to do |format|
       format.json { render json: {students: @students}, status: :ok }
     end
@@ -47,10 +53,8 @@ class StudentsController < ApplicationController
   def update
     respond_to do |format|
       if @student.update(student_params)
-        format.html { redirect_to @student, notice: 'Student was successfully updated.' }
-        format.json { render :show, status: :ok, location: @student }
+        format.json { render json: {student: @student}, status: :ok }
       else
-        format.html { render :edit }
         format.json { render json: @student.errors, status: :unprocessable_entity }
       end
     end

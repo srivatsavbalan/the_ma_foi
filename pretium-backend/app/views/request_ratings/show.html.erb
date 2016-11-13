@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @request_rating.student_id %>
+</p>
+
+<p>
+  <strong>Skill:</strong>
+  <%= @request_rating.skill_id %>
+</p>
+
+<p>
+  <strong>Teacher:</strong>
+  <%= @request_rating.teacher_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @request_rating.status %>
+</p>
+
+<%= link_to 'Edit', edit_request_rating_path(@request_rating) %> |
+<%= link_to 'Back', request_ratings_path %>
