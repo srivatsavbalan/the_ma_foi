@@ -21,6 +21,7 @@ Router.map(function() {
 		this.route('view');
 		this.route('edit');
 	});
+	this.route('student.index', {path:'/student'});
 	this.route('student.add', {path:'/student/add'});
 	this.route('student', {path:'/student/:student_id'},function(){
 		this.route('view');

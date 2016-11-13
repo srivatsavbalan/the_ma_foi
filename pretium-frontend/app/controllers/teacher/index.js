@@ -2,10 +2,14 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 	init: function () {
-		
+		if(window.localStorage.role!=="admin"){
+			let id = window.localStorage.getItem("userid");
+			var teacher = this.get('store').findRecord('teacher',id);
+			this.transitionToRoute('teacher.view',teacher);
+		}
 	},
 	teachers : function() {
-        var teachers = this.get('store').findAll('teacher');
+		var teachers = this.get('store').findAll('teacher');
         return teachers;
     }.property('model'),
     actions: {
