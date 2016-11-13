@@ -12,7 +12,10 @@ Router.map(function() {
         this.route('login');
         this.route('logout');
   	});
-	this.route('teacher', {path:'/teacher'},function(){
+  	this.route('teacher.add', {path:'/teacher/add'});
+  	this.route('teacher.index', {path:'/teacher'});
+	this.route('teacher', {path:'/teacher/:teacher_id'},function(){
+		this.route('edit');
 	});
 	this.route('student', {path:'/student'},function(){
 	});

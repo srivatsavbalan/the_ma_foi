@@ -1,1 +1,4 @@
-hi teacher
+{{#each teachers as |teacher|}}
+	{{teacher.name}},{{teacher.designation}},{{teacher.dob}},{{teacher.gender}},{{teacher.senior_secondary_school}}--->
+	{{#link-to "teacher.edit" teacher}}edit{{/link-to}}<br/>
+{{/each}}
