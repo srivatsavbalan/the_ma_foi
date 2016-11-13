@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 var ApplicationAdapter = DS.RESTAdapter.extend({
-	host: "http://localhost:3000",
+	host: "http://192.168.119.50:3001",
 	buildURL: function(modelName, id, snapshot, requestType, query) {
       var qry = this._super();
       var params = {}
