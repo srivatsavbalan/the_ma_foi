@@ -34,7 +34,7 @@ export default Ember.Controller.extend({
             var post = this.store.createRecord('teacher', param);
             var thisObj = this;
             post.save().then((savedRecord) => {
-                thisObj.transitionToRoute('teacher');
+                thisObj.transitionToRoute('teacher.view',savedRecord);
             }).catch((xhr) => {
                 console.log("error occurred and res status ", xhr);
                 thisObj.transitionToRoute('/');
