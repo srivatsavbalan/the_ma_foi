@@ -1,0 +1,115 @@
+<div class="holder">
+<div class="top_Bar">
+    <div style="float:left">
+
+
+                    <div class="common"><div class="app-name"><span class="common">{{#link-to 'student' tagName="span"}}Students{{/link-to}}</span> <span class="recent_Added common">+24</span></div><span style="font-size:12px;margin-left:3px;">1000</span></div>
+
+                </div>
+
+    <div style="float:right">
+        <div class="search">
+            <span class="common icon_sprite search_icon"></span>
+            <span class = "common"><input type="search" placeholder="search students" style="width: 200px;"></span></div>
+
+    </div>
+    <div style="clear:both"></div>
+
+</div>
+<div class="nav_Bar">
+    <ul class="routes">
+
+        <li class=""><span class="common icon_sprite add_student"></span><span class="common">Rated Students</span></li>
+    <li class=""><span class="common icon_sprite add_teacher"></span><span class="common">{{#link-to 'teacher' tagName ="span"}}Unrated Students{{/link-to}}</span></li>
+
+
+    </ul>
+</div>
+<div class="app_Content">
+ 
+ <div class="button" style="width:40px;color:white;float:right;margin-right:25px;margin-top:20px"> {{#link-to 'teacher.edit' model  tagName ="span"}}Edit{{/link-to}}</div>
+ <div class="button" style="width:40px;color:white;float:right;margin-right:25px;margin-top:20px"> {{#link-to 'teacher' model  tagName ="span"}}Back{{/link-to}}</div>
+        <div class="create_Pages" style="margin-top:60px">
+
+            <div class="details_">
+
+
+                <input id="teacher_id" type="hidden" value="{{model.id}}">
+
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Name</div>
+                    <div class="labelValCreate nohover"><span>{{model.name}}</span></div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Designation</div>
+                    <div class="labelValCreate nohover"><span>{{model.designation}}</span></div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Date of Birth</div>
+                    <div class="labelValCreate nohover"><span>{{model.dob}}</span></div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Gender</div>
+                    <div class="labelValCreate nohover"><span>{{model.gender}}</span></div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Nationality</div>
+                    <div class="labelValCreate nohover"><span>{{model.nationality}}</span></div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Marital Status</div>
+                    <div class="labelValCreate nohover"><span>{{model.marital_status}}</span></div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Spouse</div>
+                    <div class="labelValCreate nohover"><span>{{model.spouse_name}}</span></div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Address</div>
+                    <div class="labelValCreate nohover"><span>{{model.address}}</span></div>
+                    <div class="clearB"></div>
+                </div>
+            </div>
+            <div class="details_">
+
+              <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Phone</div>
+                    <div class="labelValCreate nohover"><span>{{model.contact_number}}</span></div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Secondary School</div>
+                    <div class="labelValCreate nohover"><span>{{model.secondary_school}}</span></div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Senior Secondary School</div>
+                    <div class="labelValCreate nohover"><span>{{model.senior_secondary_school}}</span></div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Graduation</div>
+                    <div class="labelValCreate nohover"><span>{{model.graduation}}</span></div>
+                    <div class="clearB"></div>
+                </div>
+                  <div class=" tabDivCreate" >
+                    <div class="labelTabCreate">Post Graduation</div>
+                    <div class="labelValCreate nohover"><span>{{model.post_graduation}}</span></div>
+                    <div class="clearB"></div>
+                </div>
+
+
+            </div>
+
+    </div>
+
+</div>
+
+</div>

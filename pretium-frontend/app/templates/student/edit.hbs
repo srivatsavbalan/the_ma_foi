@@ -1,3 +1,4 @@
+
 <div class="holder">
 <div class="top_Bar">
     <div style="float:left">
@@ -9,8 +10,8 @@
         </div>
   
     <div style="clear:both"></div>
-    
-</div>
+    </div>
+
 <div class="nav_Bar">
     <ul class="routes">
        
@@ -18,10 +19,7 @@
     </ul>
 </div>
 <div class="app_Content">
-     <div class="button" style="width:100px;color:white;float:right;margin-right:25px;margin-top:20px">
-{{#link-to 'student.edit' model  tagName ="span"}}
-Edit  {{/link-to}}
-</div>
+     <div class="button" style="width:40px;color:white;float:right;margin-right:25px;margin-top:20px" {{action "saveRecords"}}>Save</div>
         <div class="create_Pages" style="margin-top:60px">
 
            <div class="details_">
@@ -31,138 +29,140 @@ Edit  {{/link-to}}
 
                   <div class=" tabDivCreate" >
                     <div class="labelTabCreate">Name</div>
-                    <div class="labelValCreate nohover">
-                        <span>{{model.name}}</span>
+                    <div class="labelValCreate">
+                    	<input value="{{model.name}}" type="text" placeholder="name" id="name" name="name" />
                     </div>
                     <div class="clearB"></div>
                 </div>
                   <div class=" tabDivCreate" >
                     <div class="labelTabCreate">Email</div>
-                    <div class="labelValCreate  nohover">
-                     <span>{{model.email}}</span>
-                     </div>
+                    <div class="labelValCreate "><input value="{{model.email}}" type="email" placeholder="email" id="email" name="email" /></div>
                     <div class="clearB"></div>
                 </div>
                      <div class=" tabDivCreate" >
                     <div class="labelTabCreate">Date of Birth</div>
-                    <div class="labelValCreate nohover" style="padding: 16px 0 5px 0!important;">
-                        <span>{{model.dob}}</span>
+                    <div class="labelValCreate" style="padding: 16px 0 5px 0!important;">
+                    	<input value="{{model.dob}}" type="date" placeholder="dob" id="dob" name="dob" />
                     </div>
                     <div class="clearB"></div>
                 </div>
                   <div class=" tabDivCreate" >
                     <div class="labelTabCreate">Gender</div>
-                     <div class="labelValCreate nohover" style="padding: 16px 0 5px 0!important;">
- <span>{{model.gender}}</span>
- </div>
-<div class="clearB"></div>
-                   
-                    
+                    <div class="labelValCreate ">
+  {{#if (eq model.gender "Male")}}
+	<input type="radio" checked name="gender" value="Male">Male
+	<input type="radio" name="gender" value="Female">Female
+{{/if}}
+{{#if (eq model.gender "Female")}}
+	<input type="radio" name="gender" value="Male">Male
+	<input type="radio" checked name="gender" value="Female">Female
+{{/if}}
+
+                    </div>
+                    <div class="clearB"></div>
                 </div>
                       <div class=" tabDivCreate" >
                     <div class="labelTabCreate">Nationality</div>
-                    <div class="labelValCreate nohover">
-                      <span>{{model.nationality}}</span>
+                    <div class="labelValCreate">
+                    	<input value="{{model.nationality}}" type="text" placeholder="nationality" id="nationality" name="nationality" />
                     </div>
                     <div class="clearB"></div>
                 </div>
                   <div class=" tabDivCreate" >
                     <div class="labelTabCreate">Address</div>
-                    <div class="labelValCreate nohover">
+                    <div class="labelValCreate ">
 
-                            <span>{{model.address}}</span>
+                    		<textarea name="address" id="address" placeholder="address">{{model.address}}</textarea>
                     </div>
                     <div class="clearB"></div>
                 </div>
-                      <div class="tabDivCreate">
+                      <div class=" tabDivCreate">
                     <div class="labelTabCreate">Father</div>
-                    <div class="labelValCreate nohover">
-                        <span>{{model.fathername}}</span>
+                    <div class="labelValCreate">
+                    	<input value="{{model.fathername}}" type="text" placeholder="fathername" id="fathername" name="fathername" />
                     <div class="clearB"></div>
                 </div>
-                
-            </div>
-              <div class=" tabDivCreate">
+                  <div class=" tabDivCreate">
                     <div class="labelTabCreate">Mother</div>
-                    <div class="labelValCreate nohover">
-                            <span>{{model.mothername}}</span>
+                    <div class="labelValCreate ">
+                    		<input value="{{model.mothername}}" type="text" placeholder="mothername" id="mothername" name="mothername" />
                     </div>
                     <div class="clearB"></div>
                 </div>
+            </div>
              </div>
             <div class="details_">
 
                   <div class=" tabDivCreate">
                     <div class="labelTabCreate">Spouse</div>
-                    <div class="labelValCreate nohover">
-                        <span>{{model.spouse_name}}</span>
+                    <div class="labelValCreate">
+                    	<input value="{{model.spouse_name}}" type="text" placeholder="spouse_name" id="spouse_name" name="spouse_name" />
                     </div>
                     <div class="clearB"></div>
                 </div>
                   <div class=" tabDivCreate">
                     <div class="labelTabCreate">Primary School</div>
-                    <div class="labelValCreate nohover">
-                    <span>{{model.primary_school}}</span></div>
+                    <div class="labelValCreate "><input value="{{model.primary_school}}" type="text" placeholder="primary_school" id="primary_school" name="primary_school" /></div>
                     <div class="clearB"></div>
                 </div>
                      <div class=" tabDivCreate" >
                     <div class="labelTabCreate"> Secondary School</div>
-                    <div class="labelValCreate nohover">
-                        <span>{{model.secondary_school}} </span>
+                    <div class="labelValCreate">
+                    	<input value="{{model.secondary_school}}" type="text" placeholder="secondary_school" id="secondary_school" name="secondary_school" />
                     </div>
                     <div class="clearB"></div>
                 </div>
 
                     <div class=" tabDivCreate" >
                     <div class="labelTabCreate"> Senior Secondary School</div>
-                    <div class="labelValCreate nohover">
-                        <span>{{model.senior_secondary_school}}</span>
+                    <div class="labelValCreate">
+                    	<input value="{{model.senior_secondary_school}}" type="text" placeholder="secondary_school" id="senior_secondary_school" name="secondary_school" />
                     </div>
                     <div class="clearB"></div>
                 </div>
                 <div class=" tabDivCreate" >
                     <div class="labelTabCreate"> Higher Secondary School</div>
-                    <div class="labelValCreate nohover">
-                       <span>{{model.higher_secondary_school}}</span>
+                    <div class="labelValCreate">
+                    	<input value="{{model.higher_secondary_school}}" type="text" placeholder="higher_secondary_school" id="higher_secondary_school" name="higher_secondary_school" />
                     </div>
                     <div class="clearB"></div>
                 </div>
                   <div class=" tabDivCreate" >
                     <div class="labelTabCreate">Graduation</div>
-                    <div class="labelValCreate nohover">
-                    <span>{{model.graduation}}</span>
+                    <div class="labelValCreate ">
+                    <input value="{{model.graduation}}" type="text" placeholder="graduation" id="graduation" name="graduation" />
                     </div>
                     <div class="clearB"></div>
                 </div>
 
                    <div class=" tabDivCreate" >
                     <div class="labelTabCreate">Post Graduation</div>
-                    <div class="labelValCreate nohover">
-                    <span>{{model.post_graduation}}</span>
+                    <div class="labelValCreate ">
+                    <input value="{{model.post_graduation}}" type="text" placeholder="post_graduation" id="post_graduation" name="post_graduation" />
                     </div>
                     <div class="clearB"></div>
                 </div>
                     <div class=" tabDivCreate" >
                     <div class="labelTabCreate">co-curricular</div>
-                    <div class="labelValCreate  nohover">
+                    <div class="labelValCreate ">
                    
-<span>{{model.co_curricular}}</span>
+<textarea id="co_curricular" name="co_curricular" placeholder="Co Curricular">{{model.co_curricular}}</textarea>
                     </div>
                     <div class="clearB"></div>
                 </div>
                  <div class=" tabDivCreate" >
                     <div class="labelTabCreate">Extra curricular</div>
-                    <div class="labelValCreate nohover">
+                    <div class="labelValCreate ">
                    
-<span>{{model.extra_curricular}}</span>
+<textarea id="etc_curricular" name="etc_curricular" placeholder="Extra Curricular">{{model.extra_curricular}}</textarea>
                     </div>
                     <div class="clearB"></div>
                 </div>
                  <div class=" tabDivCreate" >
                     <div class="labelTabCreate">Achievements</div>
-                    <div class="labelValCreate nohover">
+                    <div class="labelValCreate ">
                    
-<span>{{model.archivements}}</span>
+<textarea id="achievements" name="achievements" placeholder="Achievements">{{model.archivements}}</textarea>
                     </div>
                     <div class="clearB"></div>
                 </div>
@@ -171,9 +171,10 @@ Edit  {{/link-to}}
                   
                  
             </div>
-     </div>
+    
 </div>
 
 </div>
 
+</div>
 
