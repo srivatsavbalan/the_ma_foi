@@ -7,8 +7,8 @@ Along with academic score, Pretium score aids in discoverability of life skills 
 
 ## Team: ElementX
 
- 1. Praveen Vignesh P - praveenvignesh31@gmail.com - 9442522031
- 2. Mukilarasan R - mukilarasan101@gmail.com - 81488 45261
- 3. Sudesh Pratap V - sudeshprathapv@gmail.com - 7904481129
- 4. Sakthi Gnanam - sakthignanam@outlook.com - 7358988732
- 5. Srivatsav Balan - srivatsavbalan@gmail.com - 9094433223
+ 1. Praveen Vignesh P
+ 2. Mukilarasan R  
+ 3. Sudesh Pratap V 
+ 4. Sakthi Gnanam 
+ 5. Srivatsav Balan 
